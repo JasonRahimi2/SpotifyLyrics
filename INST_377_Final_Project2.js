@@ -84,10 +84,6 @@ fetch(`https://api.lyrics.ovh/v1/${capitalizedMyArtist}/${capitalizedMySongName}
 .then((res) => res.json())
 .then((data) => {
 
-if (!data.lyrics) {
-    throw new Error('Nothing found');
-} 
-
 let myString = data.lyrics
 let mySplitString = myString.split("\n")
 let myArray = mySplitString
